@@ -1,19 +1,20 @@
 {
   "name": "poor-mans-calculator",
-  "version": "1.0.0",
-  "main": "index.js",
   "author": "JacekK",
   "license": "MIT",
+  "source": "src/index.html",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "build": "parcel build",
+    "dev": "parcel",
     "start": "yarn dev"
-  },
-  "dependencies": {
-    "parcel": "^2.3.2"
   },
   "engines": {
     "node": "^16",
     "yarn": "^1"
+  },
+  "dependencies": {
+    "parcel": "^2.3.2"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.3.2"
