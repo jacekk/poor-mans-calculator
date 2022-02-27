@@ -5,8 +5,10 @@
   "source": "src/index.html",
   "version": "1.0.0",
   "scripts": {
-    "build": "parcel build",
+    "build": "yarn prebuild && parcel build",
+    "deploy": "yarn build && gh-pages -d dist",
     "dev": "parcel",
+    "prebuild": "rm -rf ./dist",
     "start": "yarn dev"
   },
   "engines": {
@@ -14,9 +16,8 @@
     "yarn": "^1"
   },
   "dependencies": {
+    "@parcel/transformer-sass": "2.3.2",
+    "gh-pages": "^3.2.3",
     "parcel": "^2.3.2"
-  },
-  "devDependencies": {
-    "@parcel/transformer-sass": "2.3.2"
   }
 }
