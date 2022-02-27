@@ -12,10 +12,6 @@
 -   `$ yarn install`
 -   `$ yarn start`
 
-### Demo
-
-TBA
-
 ### License
 
 MIT
