@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Poor Man's Calculator: jacek-k</title>
+	<link rel="stylesheet" href="styles.sass" />
+	<script type="module" src="app.js"></script>
+</head>
+
+<body>
+	<br>Allowed characters:
+	<br><br>
+	<span class="allowed">+</span>
+	<span class="allowed">-</span>
+	<span class="allowed">*</span>
+	<span class="allowed">/</span>
+	<span class="allowed">%</span>
+	- modulo
+	<span class="allowed">(</span>
+	<span class="allowed">)</span>
+	<span class="allowed">,</span>
+	- comma, as decimal number separator
+	<br><br><br>
+	<form id="main-form">
+		<input type="text" id="expression-input" value="" maxlength="200" autocomplete="off" />
+		<input type="submit" id="submit-btn" value="Count" />
+	</form>
+	<p id="results"></p>
+
+	<!--
+		@todo add more Math tasks
+		http://www.w3schools.com/jsref/jsref_obj_math.asp
+	-->
+</body>
+
+</html>
