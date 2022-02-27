@@ -1,0 +1,17 @@
+{
+  "name": "poor-mans-calculator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "JacekK",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn cy:open"
+  },
+  "dependencies": {
+    "parcel": "^2.3.2"
+  },
+  "engines": {
+    "node": "^16",
+    "yarn": "^1"
+  }
+}
