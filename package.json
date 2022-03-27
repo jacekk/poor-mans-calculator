@@ -7,7 +7,7 @@
   "scripts": {
     "build": "yarn prebuild && parcel build --public-url ./",
     "deploy": "yarn build && gh-pages -d dist",
-    "dev": "parcel",
+    "dev": "yarn prebuild && parcel",
     "prebuild": "rm -rf ./dist",
     "start": "yarn dev"
   },

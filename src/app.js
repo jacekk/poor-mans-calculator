@@ -12,9 +12,11 @@ function initApp() {
 	let results = []
 
 	expressionInput.focus()
-	form.addEventListener('submit', count)
-	submitBtn.addEventListener('click', count)
-	resultsContainer.addEventListener('click', (ev) => {
+	form.addEventListener('submit', calculate)
+	submitBtn.addEventListener('click', calculate)
+	resultsContainer.addEventListener('click', onResultsClick)
+
+	function onResultsClick(ev) {
 		if (ev.target.tagName !== 'A') {
 			return
 		}
@@ -22,7 +24,7 @@ function initApp() {
 		if (typeof idx !== undefined) {
 			editResult(idx)
 		}
-	})
+	}
 
 	function fillInput(content, timeout, after) {
 		expressionInput.value = content
@@ -36,7 +38,7 @@ function initApp() {
 		fillInput('', 0, results[index].expression)
 	}
 
-	function count(ev) {
+	function calculate(ev) {
 		ev.preventDefault()
 
 		const exp = expressionInput.value
@@ -71,8 +73,11 @@ function initApp() {
 }
 
 function evaluateExpression(expression) {
-	// @todo
-	return expression.split('').join('_')
+	try {
+		return eval(expression)
+	} catch (err) {
+		return String(err)
+	}
 }
 
 function renderResults(results) {
