@@ -6,6 +6,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "yarn prebuild && parcel build --public-url ./",
+    "clean": "rm -rf ./dist ./.parcel-cache",
     "deploy": "yarn build && gh-pages -d dist",
     "dev": "yarn prebuild && parcel",
     "prebuild": "rm -rf ./dist",
