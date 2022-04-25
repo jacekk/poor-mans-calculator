@@ -73,8 +73,12 @@ function initApp() {
 }
 
 function evaluateExpression(expression) {
+	const precision = 1e3
+
 	try {
-		return eval(expression)
+		const result = eval(expression.replace(/,/g, '.'))
+
+		return (result * precision).toFixed() / precision
 	} catch (err) {
 		return String(err)
 	}
